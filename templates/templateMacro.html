@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+{% import 'macros.html' as macros %} {# Importar el macro #}
+{% block contenido %}
+<div class="container">
+  <div class="row">
+  	<div class="col-md-12">
+  		<h2>Productos</h2>
+  	</div>
+  </div>
+  <div class="row">
+  	{% for producto in productos %}
+  	<div class="col-md-3">
+  	{{ macros.mostrar_producto(producto) }}  {# Llamar al macro #}
+  	</div>
+  	{% endfor %}
+  </div>
+</div>
+{% endblock %}
