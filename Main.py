@@ -21,6 +21,12 @@ class producto(BaseModel):
     titulo: str
     texto: str
     precio: int
+
+external_data = {
+    'titulo': 'Vestido Azul',
+    'texto': 'Lindo vestido azul de segunda mano en buenas condiciones',
+    'precio': 79.99,
+}
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
@@ -43,9 +49,9 @@ async def read_item(request: Request, cantidad: int):
                                                     , "lista": ["apple", "banana", "cherry"]
                                                     , "precio": 777})
 @app.put("/ropa/{cantidad}")
-async def FuncionTemplateMacro(request: Request, productos: producto):
-    for producto in productos:
-        logger.info("hello")
+async def FuncionTemplateMacro(request: Request):
+    logger.warning("Iniciando")
+    listaProductos = [producto(**external_data), producto(**external_data)]
     return templates.TemplateResponse("templateMacro.html", {"request": request
-                                                            , "productos" : productos
+                                                            , "productos" : listaProductos
                                                             , "nombre": "Roelver"})
