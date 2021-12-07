@@ -1,4 +1,6 @@
 --Creación de conda - Python - Serverless - AWS
+0 Origen
+0.1 La carpeta con el código es C:\Users\rduarte\Documents\GitHub\aws-serverless-fastapi-cicd
 1 Conda
 1.0 Descargar Miniconda desde https://docs.conda.io/en/latest/miniconda.html
 1.0.1 	Agarrale la onda con https://conda.io/projects/conda/en/latest/user-guide/getting-started.html
@@ -18,4 +20,16 @@
 2.1 Instalar Jinja2 en Anaconda usando "pip install jinja2"
 2.2 Adaptar codigo inicial usando instrucciones para aplicar Templates
 2.3 Se ejecuta el código con Uvicorn y funciona a la primera, mostrando un HTML simple que usa el formato CSS definido y recibe una variable
-2.4 
+2.4 Se usando los conceptos en https://juncotic.com/jinja2-en-flask-introduccion/ para crear una página con un template principal y una macro 
+	que muestra tantos elementos en pantalla como los haya en el JSON
+	
+3 Base de Datos
+3.0 Se inicia investigación sobre bases de datos
+3.0 N1 Parece que lo normal es iniciar con txt/MySQL/Postgrest para la conexión a Base de Datos
+3.0 N2 Desheché esas ideas porque me interesa un servicio serverless, así que revisé servicios en la nube
+3.0 N3 Consideré MongoDB vs DynamoDB, al investigar MongoDB terminé ya con una Base serverless lista para usar, así que me decantaré por esta opción.
+
+4 MongoDB
+4.0 Se configuran las credenciales para la Base de Pruebas, que es un MongoDB Atlas
+4.0 N1 User: Roelver, Pass: Duarte
+4.0 N2 Se dieron de alta las IPs, di manualmente de alta la que me aparece en cmd (192.168.100.30/32) y con un botón se agregó la que ellos leen (187.189.240.217/32)

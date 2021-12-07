@@ -48,7 +48,7 @@ async def read_item(request: Request, cantidad: int):
                                                     , "texto": "TextoRoelver"
                                                     , "lista": ["apple", "banana", "cherry"]
                                                     , "precio": 777})
-@app.put("/ropa/{cantidad}")
+@app.get("/ropa/{cantidad}")
 async def FuncionTemplateMacro(request: Request):
     logger.warning("Iniciando")
     listaProductos = [producto(**external_data), producto(**external_data)]
