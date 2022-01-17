@@ -27,28 +27,34 @@ external_data = {
     'texto': 'Lindo vestido azul de segunda mano en buenas condiciones',
     'precio': 79.99,
 }
+
+#Función home, para probar los servicios
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+#Función básica, regresa los datos leídos
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 @app.put("/items/{item_id}")
 def create_item(item_id: int, item: Item):
     return {"item_price": item.price, "item_id": item_id}
+#Muestra una página simple con un texto verde y el número introducido
 @app.get("/pag/{id}", response_class=HTMLResponse)
 async def read_item(request: Request, id: str):
     return templates.TemplateResponse("item.html", {"request": request, "id": id})
+#Muestra una página de perfil. Manda una alerta si se presiona el botón. Practica1.
 @app.get("/perfil/{cantidad}", response_class=HTMLResponse)
 async def read_item(request: Request, cantidad: int):
     return templates.TemplateResponse("hijo.html", {"request": request
                                                     , "cantidad": cantidad
                                                     , "nombre": "Roelver"
                                                     , "subtitulo": "Hola"
-                                                    , "texto": "TextoRoelver"
+                                                    , "texto": "Cantidad: " + str(cantidad )
                                                     , "lista": ["apple", "banana", "cherry"]
                                                     , "precio": 777})
-@app.get("/ropa/{cantidad}")
+#Muestra una página de productos
+@app.get("/producto/{cantidad}")
 async def FuncionTemplateMacro(request: Request):
     logger.warning("Iniciando")
     listaProductos = [producto(**external_data), producto(**external_data)]

@@ -30,10 +30,23 @@
 </div>
 
 <script type="text/javascript">
+  let counter = 0;
   function reply_click(clicked_id)
   {
-      alert(clicked_id);
+    ++counter;
+    console.log('Score: ' + clicked_id);
+    console.log('Score: ' + counter);
   }
+
+  setTimeout(() => {
+    if (counter > 5){
+      alert('You won!!, Score: ' + counter);
+    }else{
+      alert('Player one lose, Score: ' + counter);
+    }
+  }, 2000);
+
+  
 </script>
 {% endblock %}}
 
