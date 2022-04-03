@@ -1,3 +1,5 @@
+from Clases.Perro import perro
+from Clases.Util import printclass
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from fastapi.responses import HTMLResponse
@@ -21,11 +23,13 @@ class producto(BaseModel):
     titulo: str
     texto: str
     precio: int
+    url: str
 
 external_data = {
     'titulo': 'Vestido Azul',
     'texto': 'Lindo vestido azul de segunda mano en buenas condiciones',
     'precio': 79.99,
+    'url': "https://www.nombresdeperros.eu/wp-content/uploads/2020/12/cachorro-blanco-de-nombre-Toby.jpg"
 }
 
 #Función home, para probar los servicios
@@ -58,6 +62,7 @@ async def read_item(request: Request, cantidad: int):
 async def FuncionTemplateMacro(request: Request):
     logger.warning("Iniciando")
     listaProductos = [producto(**external_data), producto(**external_data)]
+    #printclass(producto(**external_data))
     return templates.TemplateResponse("templateMacro.html", {"request": request
                                                             , "productos" : listaProductos
                                                             , "nombre": "Roelver"})

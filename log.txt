@@ -45,4 +45,10 @@
 4.0.1 Usaré MongoDB Shell para interactuar con la base en MongoDB Atlas, guía: https://docs.mongodb.com/mongodb-shell/install/#procedure
 4.0.2 Se crea una Base de Datos en este sistema usando como base https://www.youtube.com/watch?v=97FfXEy1zas
 4.1 Para manejar la Base de Datos desde el shell, hay que ir a la ruta del aplicativo (C:\Users\rduarte\Documents\Código\mongosh-1.1.8-win32-x64\bin)
-    y ahí abrir una consola, en ella ejecutar (mongosh "mongodb+srv://cluster0.4e91m.mongodb.net/myPerritos" --username Roelver)
+    y ahí abrir una consola, en ella ejecutar (mongosh "mongodb+srv://cluster0.4e91m.mongodb.net/myPerritos" --username Roelver --password Duarte)
+4.1.1 El error de "connection <monitor> to 35.169.4.187:27017 closed" se da porque la IP que estamos usando no esta en la whitelist
+4.2 Las bases de datos se guardan en C:\Users\rduarte\Documents\Mongo
+	
+5 Test
+5.0 En el tutorial de Mongo menciona pruebas. El lo hace usando una librería de JavaScript, en nuestro caso usaremos la herramienta similar para Python (?)
+5.1 
