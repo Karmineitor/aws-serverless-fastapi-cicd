@@ -15,7 +15,7 @@ templates = Jinja2Templates(directory="templates")
 #Definimos el log
 logger = logging.getLogger("foo")
 
-class Item(BaseModel):
+class ItemC(BaseModel):
     name: str
     price: float
     is_offer: bool = None
@@ -26,8 +26,8 @@ class producto(BaseModel):
     url: str
 
 external_data = {
-    'titulo': 'Vestido Azul',
-    'texto': 'Lindo vestido azul de segunda mano en buenas condiciones',
+    'titulo': 'Toñito',
+    'texto': 'Lindo perrito con un pasado oscuro. Invitalo a formar parte de tu familia.',
     'precio': 79.99,
     'url': "https://www.nombresdeperros.eu/wp-content/uploads/2020/12/cachorro-blanco-de-nombre-Toby.jpg"
 }
@@ -41,7 +41,7 @@ def read_root():
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 @app.put("/items/{item_id}")
-def create_item(item_id: int, item: Item):
+def create_item(item_id: int, item: ItemC):
     return {"item_price": item.price, "item_id": item_id}
 #Muestra una página simple con un texto verde y el número introducido
 @app.get("/pag/{id}", response_class=HTMLResponse)

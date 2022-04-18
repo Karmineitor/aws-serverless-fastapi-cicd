@@ -31,6 +31,7 @@
 2.3 Se ejecuta el código con Uvicorn y funciona a la primera, mostrando un HTML simple que usa el formato CSS definido y recibe una variable
 2.4 Se usando los conceptos en https://juncotic.com/jinja2-en-flask-introduccion/ para crear una página con un template principal y una macro 
 	que muestra tantos elementos en pantalla como los haya en el JSON
+2.5 A las páginas creadas por este método se les puede editar (F12 -> Elementos -> click derecho -> Editar como HTML) y agregar "<style> html * { background: rgba(255, 0, 0, .1); box-shadow: 0 0 0 1px red; } </style>" para mejorar la visibilidad de los componentes
 	
 3 Base de Datos
 3.0 Se inicia investigación sobre bases de datos
@@ -52,3 +53,11 @@
 5 Test
 5.0 En el tutorial de Mongo menciona pruebas. El lo hace usando una librería de JavaScript, en nuestro caso usaremos la herramienta similar para Python (?)
 5.1 
+
+6 Documentación
+6.0 Se usará la plataforma Jira para la administración del alcance y del desarrollo del proyecto. Se crea una cuenta con el correo roelverduarte@gmail
+6.1 Se crea una 
+
+7 Colores
+7.0 Se utiliza la paleta de colores 13 de la página https://webflow.com/blog/best-color-combinations?utm_source=google&utm_medium=search&utm_campaign=general-paid-workhorse&utm_term=keyword-targeting&utm_content=dynamic-search-ads-t1&gclid=CjwKCAjw9e6SBhB2EiwA5myr9rZORnoG85a4CqvzyfIeqQwkni9DfX2oE-Fs5QUT3GKYZqLd2qjkCxoClYsQAvD_BwE
+7.0.1 Esta paleta incluye el verde 3A6B35 usado para la barra de navegación
